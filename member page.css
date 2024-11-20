@@ -1,0 +1,52 @@
+
+
+.name-intro .col{
+    height:5em;
+}
+
+ @media only screen and (max-width:600px){
+    .name-intro .col{
+        height:3em;
+    }
+ }
+
+#journey{
+    padding-top:3em;
+}
+
+.journey-heading, .journey-subheading, .achievement-heading{
+    height:3em;
+}
+
+#journey .card, #education .card{
+    border:0;
+}
+
+.card-link{
+    text-decoration:none ;
+}
+
+.achievement-img{
+    width:100%;
+    /*this is just some error handling to prevent images with odd dimensions from making the uneven*/
+    height:60vh;
+}
+
+#facebook a,#instagram a, #twitter a{
+    color:rgb(3, 3, 102);
+}
+
+
+#facebook{
+    color:blue;
+}
+
+#instagram{
+    color:rgb(253,29,29)
+}
+
+#twitter{
+    color:rgb(29, 161, 242)
+}
+
+

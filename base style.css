@@ -1,0 +1,30 @@
+.ml-auto{
+    margin-left:auto;
+    margin-right: 1rem;
+}
+
+.backimg1{
+    background-color:rgb(25, 30, 32);
+    /* background-image: url="...";*/
+    color:orangered;
+    height:fit-content;
+    padding:2%;
+    
+}
+
+.black-border{
+    border: 1px solid rgb(25, 30, 32);
+}
+
+
+
+.green-text{
+    color: orangered;
+}
+
+@media only screen and (min-width:700px){
+    /*when the screen is larger or equal to 700 px then;*/
+    .row{
+        height:150px;
+    }
+}

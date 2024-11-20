@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#banner{
+    background-color:rgb(48, 45, 45);
+    background-image:url(images/stop\ racism\ original.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:top center;
+}
+
+.ban{
+    height:70vh;
+
+}
+
+.ban h2{
+    margin:0;
+    line-height:2.5em;
+}
+
+.ban div{
+    background-color:white;
+    padding-right:0;
+    padding-left:0;
+}
+
+.ban div:first-child{
+    background-color:initial;
+    text-align:center;
+}
+
+.ban div:last-child{
+    background-color:initial;
+    text-align:center;
+    padding-top:1.5em;
+}
+
+.day::after{
+    content:"DAYS";
+}
+
+.hour::after{
+    content:"HOURS";
+}
+
+.min::after{
+    content:"MINUTES";
+}
+
+.sec::after{
+    content:"SECONDS";
+}
+
+.sec::after, .min::after, .hour::after, .day::after{
+    background-color:black;
+    color:tomato;
+    font-size: 1.5vw;
+    display:block;
+    text-align: center;
+}
+
+#recognition .intro{
+    height:15vh;
+}
+
+@media only screen and (max-width:1050px){
+    #recognition .intro{
+        height:10vh;
+    }
+}
+
+#recognition .card-img-top{
+    max-height:10em;
+}
+
+
+@media only screen and (max-width: 600px){
+    .day{
+        font-size:10pt;
+    }
+
+    .ml-1{
+        margin-left:0.3em;
+    }
+    
+    .mr-1{
+        margin-right:0.3em;
+    }
+    
+    .sec::after, .min::after, .hour::after, .day::after{
+        font-size: 3vw;
+    }
+
+}
+
+

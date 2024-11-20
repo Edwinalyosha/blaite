@@ -1,0 +1,145 @@
+.pg-fade{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index:101;
+    opacity:0;
+    pointer-events:none;
+    transition:0.4s ease-out;
+}
+
+.pg-fade.is-active{
+    opacity:1;
+    pointer-events:all;
+}
+
+.pg-left{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    left:-110%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-left.is-active{
+    left:0;
+}
+
+.pg-right{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    right:-110%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-right.is-active{
+    right:0;
+}
+
+.pg-up{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    top:-100%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-up.is-active{
+    top:0;
+}
+
+.pg-down{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    bottom:-100%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-down.is-active{
+    bottom:0;
+}
+
+.loader{
+    display:flex;
+}
+
+.loader p{
+    position:absolute;
+    top:60%;
+    right:30vw;
+    font-size:4.5vw;
+}
+
+
+
+/* now to handle the loadeing animation  */
+
+.cont{
+    width:30vw;
+    display:flex;
+    align-self:center;
+}
+
+/* .loading{
+    height:10vw;
+    width:10vw;
+    background-color:red;
+    border-radius:50%;
+    animation:load-anim 3s ease-in-out infinite;
+    animation-fill-mode:both;
+    animation-play-state:initial;
+} */
+
+
+/* the animation is only placed on the div when it the cover is active to reduce the jerks on consecutive loads */
+
+.is-active .loading{
+    height:10vw;
+    width:10vw;
+    background-color:red;
+    border-radius:50%;
+    animation:load-anim 3s ease-in-out infinite;
+    animation-fill-mode:both;
+    animation-play-state:initial;
+}
+
+
+@keyframes load-anim{
+
+    /* this animation reverses itself so there is no need to place the animation direction for reverse  */
+    0%{
+        transform:translateX(0);
+        border-radius:50%;
+    }
+
+    25%{
+        background-color:white;
+        border-radius:0;
+        transform:translateX(100%);
+    }
+
+    50%{
+        background-color:red;
+        border-radius:50%;
+    }
+
+    75%{
+        background-color:white;
+        border-radius:0;
+        transform:translateX(-100%);
+    }
+
+    100%{
+        transform:translateX(0);
+        background-color:red;
+        border-radius:50%;
+    }
+
+    /* this animation reverses itself so there is no need to place the animation direction for reverse  */
+}

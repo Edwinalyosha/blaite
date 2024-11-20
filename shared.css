@@ -1,0 +1,296 @@
+*{
+    font-size:13pt;
+}
+
+@media only screen and (max-width:520px){
+    *{
+        font-size:9pt;
+    }
+
+    .copyright div{
+        font-size:x-small;
+    }
+    
+}
+
+@media only screen and (max-width:900px){
+    *{
+        font-size:11pt;
+    }
+
+
+}
+
+
+section{
+    padding:3vh 2vw;
+}
+
+.quote .col::after{
+    content:" ";
+    background-color:#00BAE2;
+    display:block;
+    height:0.2em;
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#footer h2{
+    padding-top:1.8rem;
+    padding-bottom:0.5rem;
+}
+
+#footer-intro{
+    padding-bottom:2em;
+}
+
+#socials-row{
+    height:7rem;
+}
+
+ #facebook{
+    color:blue;
+}
+
+#instagram{
+    color:rgb(253,29,29)
+}
+
+#twitter{
+    color:rgb(29, 161, 242)
+}
+
+#facebook, #twitter, #instagram{
+    /* since this is a black background*/
+    color:honeydew;
+}
+
+#facebook a,#instagram a, #twitter a{
+    text-decoration: none;
+    /*color:rgb(3, 3, 102); for the case of a lighter background*/
+    color: #00BAE2;
+}
+
+.copyright .col{
+    height:2.5em;
+}
+
+
+
+.copyright p{
+    margin-bottom:0;
+    margin-top:2vh;
+}
+
+
+
+.ht-3{
+    height:3em;
+    overflow-y:scroll;
+}
+
+.ht-25vh{
+    height:25vh;
+    overflow-y:scroll;
+}
+
+.ht-30{
+    height:30vh;
+    overflow-y:scroll;
+}
+
+.ht-60vh{
+    height:60vh;
+    overflow-y:scroll;
+}
+
+.ht-50vh{
+    height:50vh;
+    overflow-y:scroll;
+}
+
+.ht-40vh{
+    height:40vh;
+    overflow-y:scroll;
+}
+
+
+.max-w30vw{
+    max-width:30vw;
+}
+
+.mx-auto{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.my-auto{
+    margin-top:auto;
+    margin-bottom:auto;
+}
+
+.ml-auto{
+    margin-left:auto;
+}
+.ml-1{
+    margin-left:1em;
+}
+
+.mr-1{
+    margin-right:1em;
+}
+
+.mt-1em{
+    margin-top:1em;
+}
+
+.mt-2em{
+    margin-top:2em;
+}
+
+.mt-3em{
+    margin-top:3.25em;
+}
+
+.mb-1em{
+    margin-bottom:1em;
+}
+
+.pt-2em{
+    padding-top:2em;
+}
+
+.pt-1em{
+    padding-top:1em;
+}
+
+.pb-2em{
+    padding-bottom:2em;
+}
+
+.xfit-content{
+    width: -moz-fit-content;
+    width:fit-content;    
+}
+
+.yfit-content{
+    height: -moz-fit-content;
+    height: fit-content;
+    
+}
+
+.xpadding4{
+    padding-left:4%;
+    padding-right:4%;
+}
+
+.bg-img-1{
+    background-image:url("images/banner\ 4.1-min.jpg");
+    background-size:cover;
+    background-position: top center;
+}
+
+.bg-img-2{
+    background-image:url("images/banner\ 3.1-min.jpg");
+    background-size:cover;
+    background-position: top center;
+}
+
+
+.bg-grey{
+    /*background-color:rgb(190, 130, 130); a really nice color. to be considered if the page is not monochrome*/
+    background-color:rgb(139, 134, 134);
+    color:rgb(24, 23, 23);
+}
+
+.bg-black{
+    background-color:black;
+    color:white;
+}
+
+.bg-black-cl{
+    background-color:black;
+    color:white;
+    opacity:0.85;
+}
+
+.bg-black a{
+    color:#00BAE2;
+}
+
+.bg-yellow{
+    background-color:rgb(255, 196, 0);
+}
+
+.bg-turq{
+    /*background-color:#00BAE2;*/
+    background-color:#00f5c9;
+    color: black !important;
+}
+
+.fw-bold{
+    font-weight:bold;
+}
+
+.bg-pink{
+    background-color:pink;
+}
+
+.bg-blue{
+    background-color:#00BAE2;
+}
+
+
+.bg-white{
+    background-color: white;
+    color:black;
+}
+
+.bg-lightgray{
+    background-color:rgb(224, 221, 221);
+}
+
+.red{
+    color:red;
+}
+
+.dark-red{
+    color:#990500;
+}
+
+.light-red{
+    color:tomato;
+}
+
+.black{
+    color:black;
+}
+
+.turq{
+    color:#00f5c9;
+}
+
+.light-blue{
+    color:#00BAE2;
+}
+
+.hover-red:hover{
+    color:rgb(247, 31, 31);
+}
+
+.hover-turq:hover{
+    color:#00f5c9;
+}
+
+.no-display{
+    display:none;
+}
+
+.no-overflowx{
+    overflow-x:hidden;
+}
+
+.edsites{
+    width:10vw;
+}

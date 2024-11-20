@@ -1,0 +1,131 @@
+
+.ml-auto{
+    margin-left:auto;
+}
+
+.bg-picture{
+    background-color:#eee;
+    background-image:url("images/stop\ racism.jfif");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top center;
+}
+
+
+.banner{
+    height:70vh;
+    color:honeydew;
+}
+
+/*should be a little bit bigger on larger screens*/
+
+
+#about-us .row{
+    width:initial;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (min-width: 900px){
+    .banner{
+        height:75vh;
+    }
+
+    #about-us .row{
+        width:60vw;
+        
+    }
+}
+
+
+/* the about section styling*/
+
+.about-intro{
+    padding-top:4%;
+    padding-bottom:3%;
+}
+
+#about-us .row{
+    width:75vw;
+}
+
+
+/* now to deal with the member section*/
+
+#members{
+    padding-top:3%;
+    /*background-color:#ccc; this is for the case of the black to avoid over contrasting*/
+}
+
+/* .member-info{
+    
+    margin-left:0;
+} */
+
+.member-img{
+    padding:0;
+    height:10em;
+
+}
+
+.member-name{
+    padding-top:7%;
+}
+
+
+.member-info a{
+    text-decoration:none;
+}
+
+
+
+/* all elemetnts of class row that are children of class members*/
+#members .row{
+    min-height:10em;
+    height:-moz-fit-content;
+    height:fit-content;
+    margin-bottom:3%;
+    margin-left:5vw;
+    margin-right:5vw;
+}
+
+#members .row:first-child{
+    background-color:initial;
+}
+
+#members-intro{
+    padding-bottom:1%;
+}
+
+
+
+@media only screen and (max-width: 570px){
+    .member-info{
+        height:10em;
+        margin-bottom:4%;
+        padding-top:10%;
+        /* temporary solution since i have failed to use flecbox to vertically center the elements.  */
+    }
+
+    .member-img{
+        padding:0;
+        margin-bottom:0;
+    }
+}
+
+
+
+/* all of the elements with the color:  color:rgb(253,29,29);*/
+
+/* in case whe do not manage to make the area behind banner header white then:*/
+
+.banner h2{
+    color:#EB1400;
+    
+}
+
+
+#members .align-self-center *{
+    vertical-align:middle;
+}
