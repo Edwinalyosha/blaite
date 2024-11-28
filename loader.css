@@ -77,6 +77,11 @@
 }
 
 
+@media ( max-width:750px){
+    .loader p{
+        top:55%;
+    }
+}
 
 /* now to handle the loadeing animation  */
 
