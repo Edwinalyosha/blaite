@@ -77,9 +77,13 @@
 }
 
 
-@media ( max-width:750px){
+@media ( max-width:600px){
     .loader p{
         top:55%;
+    }
+
+    .cont {
+        margin-top:-20px;
     }
 }
 
