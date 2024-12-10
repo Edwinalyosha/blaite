@@ -46,6 +46,11 @@
     padding-bottom:3%;
 }
 
+#member-intro{
+    padding: 3vh 7vw;
+    padding-bottom:5vh;
+}
+
 #about-us .row{
     width:75vw;
 }
@@ -53,64 +58,65 @@
 
 /* now to deal with the member section*/
 
-#members{
-    padding-top:3%;
-    /*background-color:#ccc; this is for the case of the black to avoid over contrasting*/
+/* Container styling */
+#members .container {
+    display: grid; /* Use CSS Grid for layout */
+    gap: 2rem; /* Spacing between grid items */
+    padding: 0 5vw; /* Add some padding on the sides */
 }
 
-/* .member-info{
-    
-    margin-left:0;
-} */
-
-.member-img{
-    padding:0;
-    height:10em;
-
+/* Grid settings for different screen sizes */
+@media (min-width: 992px) { /* Large screens (desktop) */
+    #members .container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
 }
 
-.member-name{
-    padding-top:7%;
+@media (min-width: 768px) and (max-width: 991px) { /* Tablets */
+    #members .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
 }
 
-
-.member-info a{
-    text-decoration:none;
+@media (max-width: 767px) { /* Phones */
+    #members .container {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
 }
 
-
-
-/* all elemetnts of class row that are children of class members*/
-#members .row{
-    min-height:10em;
-    height:-moz-fit-content;
-    height:fit-content;
-    margin-bottom:3%;
-    margin-left:5vw;
-    margin-right:5vw;
+/* Individual member entry */
+.member-entry {
+    display: flex; /* Align name and image side-by-side */
+    align-items: center;
+    gap: 1rem; /* Space between the image and text */
 }
 
-#members .row:first-child{
-    background-color:initial;
+.member-img {
+    height: 10em;
+    width: 60%; /* have ca constant width */
+    object-fit: cover; /* Ensure the image fills the space nicely */
+    border-radius: 30%; /* Optional: Make the image circular */
 }
 
-#members-intro{
-    padding-bottom:1%;
+.member-info {
+    flex: 1; /* Allow text to take remaining space */
 }
 
+.member-info a {
+    text-decoration: none;
+}
 
+.member-name {
+    padding-top: 7%;
+}
 
-@media only screen and (max-width: 570px){
-    .member-info{
-        height:10em;
-        margin-bottom:4%;
-        padding-top:10%;
-        /* temporary solution since i have failed to use flecbox to vertically center the elements.  */
+@media (max-width: 570px) {
+    .member-info {
+        text-align: center; /* Center-align text on smaller screens */
     }
 
-    .member-img{
-        padding:0;
-        margin-bottom:0;
+    .member-img {
+        height: 8em; /* Reduce image size for smaller screens */
     }
 }
 
@@ -123,9 +129,4 @@
 .banner h2{
     color:#EB1400;
     
-}
-
-
-#members .align-self-center *{
-    vertical-align:middle;
 }
