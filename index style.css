@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 .bg-picture{
     background-color:#eee;
     background-image:url("images/art\ 1.jpeg");
@@ -17,3 +21,218 @@
     overflow-x: none;
 }
 
+
+/* now for the coming soon card styles*/
+
+/* Ensure the background image retains its style */
+/* .bg-img-1 {
+    background-image: url('your-image.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+} */
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.coming-soon-card {
+    position: relative;
+    left:-30vw;
+    top:-7vh;
+    background-color: rgb(194, 2, 2);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 350px;
+    text-align: center;
+    transform-origin: top center; /* Pin will be at the top center */
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(0deg); /* Initial rotation */
+}
+
+.card-pin {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: #333; /* Pin color */
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    font-size: 1rem;
+}
+
+.img-dot img{
+  width:70px;
+  position:absolute;
+  top:-40%;
+  right:17%;
+}
+
+.img-dot .node{
+  /* display:none; */
+  opacity:0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 700px){
+    .coming-soon-card{
+        position: relative;
+        left:0;
+        top:-10vh;
+    }
+}
+
+
+/* Keyframe animation for the card swing */
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg);
+    }
+    25% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-7deg);
+    }
+    75% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animation class to apply when the card enters the viewport */
+.card-visible {
+    opacity: 1;
+    visibility: visible;
+    animation: swing 2s ease-out forwards;
+}
+
+
+/* styles for the timeline area */
+
+.timeline-section {
+  position: relative;
+  padding: 40px;
+  background-color: #ffffff;
+  height:50vh;
+  overflow-x:scroll;
+}
+
+.timeline-section h2{
+  padding-bottom:5vh;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+}
+
+#lineCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 900px;
+  z-index: 0;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  min-width: 1000px;
+
+}
+
+.milestone {
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.milestone:hover .node {
+background-color: turquoise;
+}
+
+.node::before {
+content: "";
+width: 17px;
+height: 17px;
+border:3px solid black;
+border-radius: 50%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.node {
+width: 30px;
+height: 30px;
+background-color: rgb(218, 4, 4);
+border-radius: 50%;
+position: relative;
+margin-left:auto;
+margin-right:auto;
+}
+
+.date {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.node-content.active {
+display: block;
+opacity:1;
+}
+
+.node-content {
+display: none;
+background-color: #000;
+color: #fff;
+padding: 10px;
+border-radius: 5px;
+position: absolute;
+left:0;
+text-align: center;
+width: 30vw;
+transition: opacity 1s ease-in;
+opacity:0;
+/* transform: translate(-50%, 20px); */
+}
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .timeline {
+      flex-wrap: nowrap;
+      scroll-behavior: smooth;
+    }
+
+    .milestone {
+      flex: 0 0 auto;
+      margin: 10px;
+    }
+  }

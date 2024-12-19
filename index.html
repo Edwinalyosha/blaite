@@ -75,7 +75,7 @@
 
         <section class="bg-black ">
             <div class="container">
-                <div class="row ht-60vh">
+                <div class="row ht-mob-80vh">
                     <img src="images/stop racism original.jpeg" alt="" class="col col-10 col-md-6 sr-top1">
                     <div class="col col-md-6 yfit-content justify-content-centre sr-bottom1">
                         <h2 class="red">
@@ -93,12 +93,16 @@
 
         <section class="bg-img-1">
             <div class="row ht-60vh">
-                <div class="col-10 col-md-6 bg-black-cl yfit-content">
-                    <h3 class="red fs-2 sr-left1">blaite members sitting together for prayer?</h3>
-                    <p class="fs-4 sr-right1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo non enim iure eius! Consequuntur error ipsum dolorum nostrum, reiciendis cumque.</p>
+                <div class="col-12 card-container">
+                    <div class="coming-soon-card">
+                        <div class="card-pin"></div>
+                        <h3 class="card-title">Coming Soon</h3>
+                        <p class="card-description">Paianett; our first spoken word album. Show tickets here. </p>
+                    </div>
                 </div>
             </div>
         </section>
+        
 
         <section class="bg-black ">
             <div class="container">
@@ -118,7 +122,58 @@
     
         </section>
 
+        <section class="timeline-section">
+            <div class="timeline-container">
+              <canvas id="lineCanvas"></canvas>
 
+              <h2 class="red">
+                Milestones:
+               </h2>
+          
+              <!-- Nodes Wrapper -->
+              <div class="timeline">
+                <!-- Milestone Nodes -->
+                
+                
+          
+                <div class="milestone" id="dot1" data-title="10/2014" data-content="First public performance ever">
+                  <div class="node"></div>
+                  <p class="date">2014</p>
+                </div>
+          
+                <div class="milestone" id="dot2" data-title="12/2016" data-content="Holiday family and friends conference">
+                  <div class="node"></div>
+                  <p class="date">2016</p>
+                </div>
+          
+                <div class="milestone" id="dot3" data-title="2020" data-content="Third annual end of year camp">
+                  <div class="node"></div>
+                  <p class="date">2020</p>
+                </div>
+          
+                <div class="milestone" id="dot4" data-title="10/2024" data-content="Tenth anniversary">
+                  <div class="node"></div>
+                  <p class="date">2024</p>
+                </div>
+          
+                <div class="milestone" id="dot5" data-title="12/2024" data-content="Launched our website">
+                  <div class="node"></div>
+                  <p class="date">2024</p>
+                </div>
+
+                <div class="milestone img-dot" id="dot6" data-title="2024" data-content="Launched a new creative project">
+                    <div class="node"></div>
+                    <img src="images/stickman-running.gif" alt="we keep going">
+                  </div>
+              </div>
+            </div>
+          
+            <!-- Content Card -->
+            <div class="node-content" id="node-content">
+              <h3 id="node-title"></h3>
+              <p id="node-description"></p>
+            </div>
+          </section>
 
         <section id="footer" class="bg-black">
             <div class="container sr-bottom1">
@@ -181,5 +236,6 @@
         <script src="loader.js"></script>
         <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
         <script src="sr.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
